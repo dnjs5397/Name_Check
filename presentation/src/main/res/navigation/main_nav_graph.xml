@@ -9,17 +9,29 @@
         android:id="@+id/mainFragment"
         android:name="com.swkim.presentation.view.MainFragment"
         android:label="fragment_main"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_main" >
+        <action
+            android:id="@+id/action_mainFragment_to_womanNameFragment"
+            app:destination="@id/womanNameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/manNameFragment"
         android:name="com.swkim.presentation.view.ManNameFragment"
         android:label="fragment_man_name"
-        tools:layout="@layout/fragment_man_name" />
+        tools:layout="@layout/fragment_man_name" >
+        <action
+            android:id="@+id/action_manNameFragment_to_resultFragment"
+            app:destination="@id/resultFragment" />
+    </fragment>
     <fragment
         android:id="@+id/womanNameFragment"
         android:name="com.swkim.presentation.view.WomanNameFragment"
         android:label="fragment_woman_name"
-        tools:layout="@layout/fragment_woman_name" />
+        tools:layout="@layout/fragment_woman_name" >
+        <action
+            android:id="@+id/action_womanNameFragment_to_manNameFragment"
+            app:destination="@id/manNameFragment" />
+    </fragment>
     <fragment
         android:id="@+id/resultFragment"
         android:name="com.swkim.presentation.view.ResultFragment"
